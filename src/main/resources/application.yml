@@ -1,0 +1,24 @@
+app:
+  kafka:
+    host: localhost
+    port: 29092
+    topic: logger
+amazon:
+  aws:
+    accesskey: ${AWS_ACCESS_KEY}
+    secretkey: ${AWS_SECRET_KEY}
+    region: ap-southeast-1
+  dynamodb:
+    endpoint: https://dynamodb.ap-southeast-1.amazonaws.com
+server:
+  port: 8020
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
